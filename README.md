@@ -41,3 +41,105 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+# Flutter package to implement Light, Dark and Sytem Theme mode, and persist it on restart of app.
+
+[Appearance](https://pub.dev/packages/appearance) -
+[Appearance Source Code](https://github.com/alihaider78222/appearance)
+
+## Example
+
+1. Initialize `SharedPreferencesManager` singleton for `SharedPreference` and add it before `runApp()` method.
+
+```dart
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesManager.instance.init();
+  runApp(const MyApp());
+}
+```
+
+2. extend your root class with `AppearanceState` using keyword `with`.
+
+```dart
+class _MyAppState extends State<MyApp> with AppearanceState { }
+```
+
+3. Wrap your `MaterialApp` or `CupertinoApp` with  **BuildWithAppearance**
+
+```dart
+BuildWithAppearance(
+    initial: ThemeMode.light, // optional : default value is [ThemeMode.system]
+    builder: (context) => MaterialApp()
+);
+```
+
+### Using `MaterialApp`
+
+```dart
+BuildWithAppearance(
+    initial: ThemeMode.light, // optional : default value is [ThemeMode.system]
+    builder: (context) => MaterialApp(
+        title: 'Appearance (Material Example)',
+        themeMode: Appearance.of(context)?.mode,
+        theme: ThemeData(
+            brightness: Brightness.light,
+        ),
+        darkTheme: ThemeData(
+            brightness: Brightness.dark,
+        ),
+        home: const HomeMaterialPage(),
+    ),
+);
+```
+
+### Using `CupertinoApp`
+
+```dart
+BuildWithAppearance(
+    initial: ThemeMode.light, // optional : default value is [ThemeMode.system]
+    builder: (context) {
+        return CupertinoApp(
+            title: 'Appearance (Cupertino Example)',
+            theme: CupertinoThemeData(
+                brightness: Appearance.of(context)?.cupertinoBrightness!,
+            ),
+            localizationsDelegates: const [
+                DefaultMaterialLocalizations.delegate,
+                DefaultCupertinoLocalizations.delegate,
+                DefaultWidgetsLocalizations.delegate,
+            ],
+            home: HomeCupertinoPage(),
+        );
+    },
+);
+```
+
+![](https://github.com/hoathienvu8x/Flutter-Demos/blob/master/images/demo_1.gif?raw=true)
+![](https://github.com/hoathienvu8x/Flutter-Demos/blob/master/images/demo_2.gif?raw=true)
+
+## LICENCE
+
+```
+MIT License
+
+Copyright (c) 2023 Ali Haider
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
