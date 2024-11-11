@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 // import 'appearance/shared_preference.dart';
 // import 'appearance/appearance_demo.dart';
 // import 'nav_drawer_3d/nav_drawer_3d.dart';
-import 'nav_drawer_3d/drawer_3d.dart';
+// import 'nav_drawer_3d/drawer_3d.dart';
+import 'nav_drawer_3d/zoom3d.dart';
 
 void main() async {
   // runApp(const MyApp());
@@ -16,5 +17,6 @@ void main() async {
   // await SharedPreferencesManager.instance.init();
   // runApp(const AppearanceDemoApp());
   // runApp(const Nav3dApp());
-  runApp(const Drawer3DApp());
+  // runApp(const Drawer3DApp());
+  runApp(const ZoomDrawerApp());
 }

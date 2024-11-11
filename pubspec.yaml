@@ -12,7 +12,7 @@ dependencies:
 
   shared_preferences: ^2.3.3
   line_icons: ^2.0.3
-  image_sequence_animator: ^2.0.0
+  flutter_zoom_drawer: ^3.2.0
 
 dev_dependencies:
   flutter_test:
