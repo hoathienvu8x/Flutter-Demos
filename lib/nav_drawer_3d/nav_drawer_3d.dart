@@ -7,6 +7,7 @@ class Nav3dApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Nav3dHome(),
     );
   }
@@ -52,6 +53,7 @@ class Nav3DHomeState extends State<Nav3dHome> {
                           radius: 50.0,
                           backgroundImage: NetworkImage(
                             "https://mighty.tools/mockmind-api/content/human/49.jpg",
+                            scale: 50,
                           ),
                         ),
                         const SizedBox(
@@ -61,8 +63,11 @@ class Nav3DHomeState extends State<Nav3dHome> {
                           "Eren Jager",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                           ),
+                        ),
+                        const SizedBox(
+                          height: 10.0,
                         ),
                         Expanded(
                           child: ListView(
