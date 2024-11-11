@@ -10,6 +10,7 @@ class AdvancedDrawerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
   }
@@ -77,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   shape: BoxShape.circle,
                 ),
                 child: Image.asset(
-                  'assets/images/flutter_logo.png',
+                  'assets/advanced_drawer/flutter_logo.png',
                 ),
               ),
               ListTile(
