@@ -143,3 +143,76 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+# Google Nav Bar
+
+[Google Nav Bar](https://pub.dev/packages/google_nav_bar) -
+[Google Nav Bar Source Code](https://github.com/sooxt98/google_nav_bar)
+
+## Example
+
+```dart
+GNav(
+  rippleColor: Colors.grey[800], // tab button ripple color when pressed
+  hoverColor: Colors.grey[700], // tab button hover color
+  haptic: true, // haptic feedback
+  tabBorderRadius: 15, 
+  tabActiveBorder: Border.all(color: Colors.black, width: 1), // tab button border
+  tabBorder: Border.all(color: Colors.grey, width: 1), // tab button border
+  tabShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)], // tab button shadow
+  curve: Curves.easeOutExpo, // tab animation curves
+  duration: Duration(milliseconds: 900), // tab animation duration
+  gap: 8, // the tab button gap between icon and text 
+  color: Colors.grey[800], // unselected icon color
+  activeColor: Colors.purple, // selected icon and text color
+  iconSize: 24, // tab button icon size
+  tabBackgroundColor: Colors.purple.withOpacity(0.1), // selected tab background color
+  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
+  tabs: [
+    GButton(
+      icon: LineIcons.home,
+      text: 'Home',
+    ),
+    GButton(
+      icon: LineIcons.heart_o,
+      text: 'Likes',
+    ),
+    GButton(
+      icon: LineIcons.search,
+      text: 'Search',
+    ),
+    GButton(
+      icon: LineIcons.user,
+      text: 'Profile',
+    )
+  ]
+)
+```
+
+![](https://github.com/hoathienvu8x/Flutter-Demos/blob/master/images/google_nav.gif?raw=true)
+
+## LICENCE
+
+```
+MIT License
+
+Copyright (c) 2019 Soo Xiao Tong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
