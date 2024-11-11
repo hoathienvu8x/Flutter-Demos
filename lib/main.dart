@@ -7,9 +7,10 @@ import 'package:flutter/material.dart';
 // import 'appearance/appearance_demo.dart';
 // import 'nav_drawer_3d/nav_drawer_3d.dart';
 // import 'nav_drawer_3d/drawer_3d.dart';
-import 'nav_drawer_3d/zoom3d.dart';
+// import 'nav_drawer_3d/zoom3d.dart';
+import 'awesome_drawer_bar/awesome_drawer_bar_demo.dart';
 
-void main() async {
+void main() {
   // runApp(const MyApp());
   // runApp(const GoogleNavApp());
   // runApp(const DayNightApp());
@@ -18,5 +19,6 @@ void main() async {
   // runApp(const AppearanceDemoApp());
   // runApp(const Nav3dApp());
   // runApp(const Drawer3DApp());
-  runApp(const ZoomDrawerApp());
+  // runApp(const ZoomDrawerApp());
+  runApp(AwesomeDrawerBarDemoApp());
 }
