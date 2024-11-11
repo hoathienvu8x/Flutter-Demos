@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 // import 'nav_drawer_3d/nav_drawer_3d.dart';
 // import 'nav_drawer_3d/drawer_3d.dart';
 // import 'nav_drawer_3d/zoom3d.dart';
-import 'awesome_drawer_bar/awesome_drawer_bar_demo.dart';
+// import 'awesome_drawer_bar/awesome_drawer_bar_demo.dart';
+import 'advanced_drawer/advanced_drawer.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -20,5 +21,6 @@ void main() {
   // runApp(const Nav3dApp());
   // runApp(const Drawer3DApp());
   // runApp(const ZoomDrawerApp());
-  runApp(AwesomeDrawerBarDemoApp());
+  // runApp(AwesomeDrawerBarDemoApp());
+  runApp(const AdvancedDrawerApp());
 }
