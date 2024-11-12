@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/daynight/
     - assets/advanced_drawer/
+    - assets/card_swiper/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
